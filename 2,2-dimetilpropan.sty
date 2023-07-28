@@ -1,0 +1,54 @@
+\begin{tikzpicture}[
+    youngnode/.style={rectangle, draw=red!60, fill=red!5, very thick, minimum size=40},
+    oldnode/.style={rectangle, draw=blue!60, fill=blue!5, very thick, minimum size=40},
+    ]
+      %Nodes
+      \node      (A)                         {};
+      \node      (B)       [right=of A]      {};
+      \node      (C)       [right=of B]      {};
+      % \node      (D)       [right=of C]      {};
+      % \node      (E)       [right=of D]      {};
+    
+      % \node      (M)        [below=of A]      {};
+      \node      (N)        [below=of B]      {};
+      % \node      (O)        [below=of C]      {};
+      % \node      (P)        [below=of D]      {};
+      \node      (R)        [above=of B]      {};
+    
+      \filldraw [black] (A) circle (5pt); 
+      \filldraw [black] (B) circle (5pt); 
+      \filldraw [black] (C) circle (5pt); 
+      % \filldraw [black] (D.south) circle (5pt); 
+    
+      % \filldraw [black] (M.north) circle (5pt); 
+      \filldraw [black] (N) circle (5pt); 
+      % \filldraw [black] (O.north) circle (5pt); 
+      % \filldraw [black] (P.north) circle (3pt); 
+      \filldraw [black] (R) circle (5pt);
+  
+      %Lines
+      % \draw[-, ultra thin] (A.south)  to node[right] {} (M.north);
+      % \draw[-, ultra thin] (A.south)  to node[right] {} (N.north);
+      % \draw[-, ultra thin] (A.south)  to node[right] {} (O.north);
+      % \draw[-, ultra thin] (A.south)  to node[right] {} (P.north);
+    
+      % \draw[-, ultra thin] (B.south)  to node[right] {} (M.north);
+      \draw[-, ultra thin] (B.south)  to node[right] {} (N.north);
+      \draw[-, ultra thin] (B.west)  to node[right] {} (A.east);
+      \draw[-, ultra thin] (B.east)  to node[right] {} (C.west);
+
+      \draw[-, ultra thin] (R.south)  to node[right] {} (B.north);
+      % \draw[-, ultra thin] (B.south)  to node[right] {} (O.north);
+      % \draw[-, ultra thin] (B.south)  to node[right] {} (P.north);
+
+      % \draw[-, ultra thin] (C.south)  to node[right] {} (M.north);
+      % \draw[-, ultra thin] (C.south)  to node[right] {} (N.north);
+      % \draw[-, ultra thin] (C.south)  to node[right] {} (O.north);
+      % \draw[-, ultra thin] (C.south)  to node[right] {} (P.north);
+
+      % \draw[-, ultra thin] (D.south)  to node[right] {} (M.north);
+      % \draw[-, ultra thin] (D.south)  to node[right] {} (N.north);
+      % \draw[-, ultra thin] (D.south)  to node[right] {} (O.north);
+      % \draw[-, ultra thin] (D.south)  to node[right] {} (P.north);
+      % \draw[-, ultra thin] (D.south)  to node[right] {} (R.north);
+    \end{tikzpicture}
